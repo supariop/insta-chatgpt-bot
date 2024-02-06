@@ -1,3 +1,5 @@
+const keep_alive = require('./keep_alive.js')
+
 const Insta = require("@ber4tbey/insta.js");
 const client = new Insta.Client();
 const { Configuration, OpenAIApi } = require("openai");
