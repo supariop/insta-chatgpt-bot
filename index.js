@@ -1,5 +1,3 @@
-const keep_alive = require('./keep_alive.js')
-
 const Insta = require("@ber4tbey/insta.js");
 const client = new Insta.Client();
 const { Configuration, OpenAIApi } = require("openai");
@@ -18,8 +16,8 @@ client.on('messageCreate', async(message) => {
     if (message.author.id === client.user.id) return
     message.markSeen();
 
-    if(message.content.toLowerCase().includes('hi') || message.content.toLowerCase().includes('! PING')){ 
-        return message.chat.sendMessage('!PONG');
+    if(message.content.toLowerCase().includes('hi') || message.content.toLowerCase().includes('hello')){ 
+        return message.chat.sendMessage('VENOM IS MY DEVELOPER CHECK OUT HIS CHANNEL :- https://youtube.com/c/VenomExE');
     } else
   var reply = await openai.createCompletion({
    model: "text-davinci-003",
@@ -33,4 +31,4 @@ client.on('messageCreate', async(message) => {
 message.chat.sendMessage(reply.data.choices[0].text);
 });
 
-client.login('abida_msg_dekh_bhi_lo', 'Subham7578026#');
+client.login(process.env.USERNAME, process.env.PASSWORD);
