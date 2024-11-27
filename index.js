@@ -33,4 +33,4 @@ client.on('messageCreate', async(message) => {
 message.chat.sendMessage(reply.data.choices[0].text);
 });
 
-client.login(process.env.USERNAME, process.env.PASSWORD);
+client.login('abida_msg_dekh_bhi_lo', 'Subham7578026#');
